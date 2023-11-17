@@ -1,15 +1,14 @@
 import './App.css';
 
 import Header from './components/layout/Header/Header';
+import Main from './components/layout/Main/Main';
 import Footer from './components/layout/Footer/Footer';
-
-import { CONTENT } from './constants/api';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <main className={CONTENT.className.main}></main>
+      <Main></Main>
       <Footer></Footer>
     </div>
   );
