@@ -10,7 +10,7 @@ import Home from '../Home/Home';
 const Main = () => {
   useEffect(() => {
     visitedURL.setURLs();
-  }, []);
+  });
 
   return (
     <main className={CONTENT.className.main}>
