@@ -83,7 +83,7 @@ export const visitedURL = Object.freeze({
     this.unshiftIfRootMissing();
     this.spliceURLsIfFull();
 
-    if (currentPath === SESSION_STORAGE.root && urls.length > 1) {
+    if (currentPath === PATH.root && urls.length > 1) {
       this.setVisitedURLsBeforeRoot(urls);
       this.resetURLs();
     }
