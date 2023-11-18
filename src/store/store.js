@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import contentState from "./contentSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import contentState from './contentSlice';
 
 export default configureStore({
   reducer: {

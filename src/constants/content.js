@@ -1,5 +1,5 @@
 const className = Object.freeze({
-  main: "yuziwoo",
+  main: 'yuziwoo',
 });
 
 export const CONTENT = Object.freeze({

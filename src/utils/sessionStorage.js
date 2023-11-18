@@ -1,5 +1,5 @@
-import PATH from "../constants/path";
-import SESSION_STORAGE from "../constants/sessionStorageConstants";
+import PATH from '../constants/path';
+import SESSION_STORAGE from '../constants/sessionStorageConstants';
 
 export const visitedURL = Object.freeze({
   getCurrentPath() {
@@ -36,10 +36,7 @@ export const visitedURL = Object.freeze({
 
     if (urls[0] !== PATH.root) {
       urls.unshift(PATH.root);
-      sessionStorage.setItem(
-        SESSION_STORAGE.visitedURLs,
-        JSON.stringify(urls),
-      );
+      sessionStorage.setItem(SESSION_STORAGE.visitedURLs, JSON.stringify(urls));
     }
   },
 

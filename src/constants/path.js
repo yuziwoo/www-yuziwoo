@@ -1,5 +1,5 @@
 const PATH = Object.freeze({
-  root: "/",
+  root: '/',
 });
 
 export default PATH;
