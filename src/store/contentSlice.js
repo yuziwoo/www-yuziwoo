@@ -1,14 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const contentState = createSlice({
-  name: 'contentState',
-  initialState: {},
+  name: "contentState",
+  initialState: {
+    path: "",
+  },
   reducers: {
-    reset(state, action) {
-      return action.payload;
+    resetPath(state, action) {
+      const path = `${action.payload}`;
+      state.path = "path";
+      console.log(action.payload, state.path);
     },
   },
 });
 
-export const { reset } = contentState.actions;
+export const { resetPath } = contentState.actions;
 export default contentState;
