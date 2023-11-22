@@ -1,3 +1,5 @@
-.contenty {
+main {
   min-height: var(--height-100vh-withoutHeader);
+  width: 100%;
+  overflow-x: hidden;
 }

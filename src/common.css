@@ -3,17 +3,21 @@
 
 /* Root Variable*/
 :root {
+  --zIndex-header: 500;
+  
   --color-black: #000;
   --color-white: #fff;
   --color-2: #f8f8f8;
   --color-3: #eeeeee;
   --color-4: #e5e5e5;
+  --color-5: #dddddd;
   --color-7: #888888;
 
   --fontFamily-default: 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'sans-serif';
   --fontWeight-default: 400;
 
-  --lineheight-default: 1.4;
+  --lineHeight-default: 1.4;
+  --lineHeight-short: 1.2;
 
   --header-height: 60px;
 
@@ -25,6 +29,7 @@
   --padding-body-rest: 8px;
 
   --transition-default: all 0.1s;
+  --transition-1: all 0.15s;
 
   --borderRadius-button: 4px;
 }
@@ -51,7 +56,7 @@
   -webkit-tap-highlight-color: transparent;
   appearance: none;
 
-  line-height: var(--lineheight-default);
+  line-height: var(--lineHeight-default);
   font-weight: var(--fontWeight-default);
 }
 
@@ -134,3 +139,5 @@ q:before {
   content: "";
   content: none
 }
+
+/* only for this app */

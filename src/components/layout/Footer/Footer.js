@@ -17,11 +17,11 @@ const Footer = (props) => {
             </li>
             <li>
               <h2>이메일</h2>
-              <p><a href='mailto:yuziwoo@naver.com'>yuziwoo@naver.com</a></p>
+              <p className={styles['cursor-pointer']}><a href='mailto:yuziwoo@naver.com'>yuziwoo@naver.com</a></p>
             </li>
             <li>
               <h2>카카오톡</h2>
-              <p><a target='_blank' rel='noreferrer' href='https://open.kakao.com/o/s0dW0TPf'>1대1 문의하기</a></p>
+              <p className={styles['cursor-pointer']}><a target='_blank' rel='noreferrer' href='https://open.kakao.com/o/s0dW0TPf'>1대1 문의하기</a></p>
             </li>
           </ul>
           <p className={styles['copyright']}>Copyright © 2023 Yuziwoo</p>

@@ -8,10 +8,12 @@ import Content from '../../../pages/Content/Content';
 import Home from '../../../pages/Home/Home';
 import Contact from '../../../pages/Contact/Contact';
 import Contenty from '../../../utils/Contenty';
+import { contents } from '../../../data/content';
 
 import styles from './main.module.css'
 
-const Main = () => {
+
+const Main = (props) => {
   useEffect(() => {
     Contenty.setContenty();
     return (
@@ -22,11 +24,11 @@ const Main = () => {
   });
 
   return (
-    <main className={`${CONTENT.className.main} ${styles.contenty}`} >
+    <main className={styles.main}>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home contents={contents} navigate={props.navigate}/>} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/content/:id' element={<Content />} />
+        <Route path='/content/:id' element={<Content contents={contents}/>} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </main>

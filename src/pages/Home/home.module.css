@@ -1,0 +1,45 @@
+.home .main-wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  position: relative;
+}
+
+section {
+  padding-top: 50px;
+}
+
+section .title {
+  width: 100%;
+  padding: var(--padding-default);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: var(--lineHeight-short);
+}
+
+section .subTitle {
+  width: 100%;
+  padding: var(--padding-default);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: var(--lineHeight-short);
+  color: var(--color-7);
+  padding-top: 5px;
+}
+
+.sec1 .swiper-wrap {
+  padding-top: 0px;
+}
+
+@media screen and (max-width: 1080px) {
+  .home .main-wrap {
+    max-width: 560px;
+  }
+  .sec1 {
+    padding-top: 0;
+  }
+  .sec1 .title,
+  .sec1 .subTitle {
+    display: none;
+  }
+}

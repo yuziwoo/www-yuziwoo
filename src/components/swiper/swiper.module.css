@@ -1,0 +1,147 @@
+.home {
+  width: 100%;
+  padding: 20px 0px 40px;
+  margin-left: 30px;
+  position: relative;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+.home::after {
+  width: 1%;
+  height: 100%;
+  display: block;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
+  z-index: 1;
+}
+
+.home .swiper-slide {
+  cursor: pointer;
+}
+
+.home .swiper-slide .box {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+
+.home .swiper-slide .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home .swiper-slide .box img {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.home .swiper-slide .box .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 16px 25px;
+  color: var(--color-white);
+  line-height: var(--lineHeight-short);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.home .swiper-slide .box .info h3 {
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  transition: all 0.7s;
+}
+
+.home .swiper-slide .box .info h1 {
+  font-size: 15px;
+  padding-top: 4px;
+  display: block;
+  transition: all 0.7s;
+}
+
+.home .pagination {
+  width: 100%;
+  padding: var(--padding-default);
+  display: flex;
+  justify-content: flex-end;
+  bottom: 20px;
+}
+
+.home .pagination .pagination-bullet {
+  width: 25px;
+  height: 2px;
+  display: block;
+  background-color: var(--color-5);
+  transition: var(--transition-1);
+  margin-left: 1px;
+}
+
+.home .pagination .pagination-bullet-active {
+  background-color: var(--color-black);
+}
+
+.home .pagination-fraction {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 26px;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  top: auto;
+}
+
+.home .pagination-fraction span {
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.home .pagination-fraction .pagination-current,
+.home .pagination-fraction .pagination-total {
+  color: white;
+}
+
+@media screen and (max-width: 1080px) {
+  .home {
+    margin-left: 0px;
+    padding: 0px;
+  }
+
+  .home::after {
+    display: none;
+  }
+
+  .home .swiper-slide .box {
+    border-radius: 0px;
+  }
+  
+  .home .swiper-slide .box:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .home .swiper-slide .box .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: var(--padding-default);
+    padding-bottom: 30px;
+    color: var(--color-white);
+    line-height: var(--lineHeight-short);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  }
+}
