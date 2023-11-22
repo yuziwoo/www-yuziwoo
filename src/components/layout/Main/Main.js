@@ -6,10 +6,16 @@ import { Route, Routes } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
 import Content from '../Content/Content';
 import Home from '../Home/Home';
+import Contenty from '../../../utils/Contenty';
 
 const Main = () => {
   useEffect(() => {
-    visitedURL.setURLs();
+    Contenty.setContenty();
+    return (
+      () => {
+        visitedURL.setURLs();
+      }
+    )
   });
 
   return (
