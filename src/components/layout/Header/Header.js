@@ -11,7 +11,6 @@ const Header = (props) => {
           </div>
           <nav>
             <p onClick={() => { props.navigate('/contact'); }}>CONTACT</p>
-            <p onClick={() => { props.navigate('/contact'); }}>CONTACT</p>
           </nav>
         </div>
       </header>
