@@ -41,22 +41,16 @@ header .global-nav nav {
   justify-content: end;
   align-items: center;
   height: 100%;
-  margin-right: calc(var(--padding-body-rest) - 4px);
 }
 
 header .global-nav nav p {
   cursor: pointer;
-  margin-left: 2px;
-  padding: 3px 4px;
+  padding: 8px 8px;
   transition: var(--transition-default);
   border-radius: var(--borderRadius-button);
   transform: scale(1);
   opacity: 1;
   font-size: 12px;
-}
-
-header .global-nav nav p:first-child {
-  margin-left: 0;
 }
 
 header .global-nav nav p:hover {
