@@ -1,12 +1,12 @@
 import Logo from '../../Logo';
-import headerStyles from './header.module.css';
+import styles from './header.module.css';
 
 const Header = (props) => {
   return (
     <>
-      <header className={headerStyles.header}>
-        <div className={headerStyles['global-nav']}>
-          <div className={headerStyles['logo']} onClick={() => { props.navigate('/'); }}>
+      <header className={styles.header}>
+        <div className={styles['global-nav']}>
+          <div className={styles['logo']} onClick={() => { props.navigate('/'); }}>
             <Logo color='black'/>
           </div>
           <nav>
@@ -14,7 +14,7 @@ const Header = (props) => {
           </nav>
         </div>
       </header>
-      <div className={headerStyles['header-relative']}></div>
+      <div className={styles['header-relative']}></div>
     </>
   );
 };

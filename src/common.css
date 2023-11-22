@@ -8,6 +8,7 @@
   --color-2: #f8f8f8;
   --color-3: #eeeeee;
   --color-4: #e5e5e5;
+  --color-7: #888888;
 
   --fontFamily-default: 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'sans-serif';
   --fontWeight-default: 400;
@@ -19,6 +20,7 @@
   --height-100vh: 100vh;
   --height-100vh-withoutHeader: calc(100vh - var(--header-height));
 
+  --padding-default: 0 30px;
   --padding-body: 0 22px;
   --padding-body-rest: 8px;
 
@@ -31,6 +33,7 @@
   :root {
     --header-height: 44px;
     --padding-body: 0 8px;
+    --padding-default: 0 16px;
   }
 }
 
@@ -44,7 +47,6 @@
   flex-shrink: 0;
 
   /* device reset */
-  -webkit-touch-callout: none;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
   appearance: none;

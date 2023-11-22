@@ -38,7 +38,7 @@ header .global-nav .logo svg {
 header .global-nav nav {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
 }
