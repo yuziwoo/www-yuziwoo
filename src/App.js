@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import './App.css';
+import './common.css';
 
 import Header from './components/layout/Header/Header';
 import Main from './components/layout/Main/Main';

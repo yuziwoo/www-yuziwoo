@@ -1,10 +1,21 @@
+import Logo from '../../Logo';
+import headerStyles from './header.module.css';
+
 const Header = (props) => {
   return (
-    <header>
-      <h1>HEADER</h1>
-      <button onClick={() => { props.navigate('/'); }}>Home으로 이동</button>
-      <button onClick={() => { props.navigate('/content/1'); }}>content1로 이동</button>
-    </header>
+    <>
+      <header className={headerStyles.header}>
+        <div className={headerStyles['global-nav']}>
+          <div className={headerStyles['logo']} onClick={() => { props.navigate('/'); }}>
+            <Logo color='black'/>
+          </div>
+          <nav>
+            <p onClick={() => { props.navigate('/contact'); }}>CONTACT</p>
+          </nav>
+        </div>
+      </header>
+      <div className={headerStyles['header-relative']}></div>
+    </>
   );
 };
 

@@ -3,9 +3,10 @@ import { useEffect } from 'react';
 import { CONTENT } from '../../../constants/content';
 import { visitedURL } from '../../../utils/sessionStorage';
 import { Route, Routes } from 'react-router-dom';
-import NotFound from '../NotFound/NotFound';
-import Content from '../Content/Content';
-import Home from '../Home/Home';
+import NotFound from '../../NotFound/NotFound';
+import Content from '../../Content/Content';
+import Home from '../../Home/Home';
+import Contact from '../../Contact/Contact';
 import Contenty from '../../../utils/Contenty';
 
 const Main = () => {
@@ -22,6 +23,7 @@ const Main = () => {
     <main className={CONTENT.className.main}>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/content/:id' element={<Content />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
