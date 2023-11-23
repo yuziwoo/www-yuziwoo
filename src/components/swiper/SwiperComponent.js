@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import styles from './swiper.module.css';
 import PATH from '../../constants/path';
 import { CONTENT } from '../../constants/content';
+import { ButtonLeft, ButtonRight } from '../interaction/interaction';
 
 export const SwiperHome = (props) => {
   const contents = props.contents;
@@ -30,7 +31,20 @@ export const SwiperHome = (props) => {
 
   const breakpoints = {
     1081: {
-      slidesPerView: 3.2,
+      slidesPerView: 4.4,
+      spaceBetween: 10,
+      pagination: {
+        type: 'bullets',
+        bulletClass: `${styles['pagination-bullet']}`,
+        bulletActiveClass: `${styles['pagination-bullet-active']}`,
+        horizontalClass: `${styles['pagination']}`,
+        renderBullet(index, className) {
+          return `<span class="${className}"></span>`;
+        },
+      },
+    },
+    1921: {
+      slidesPerView: 5.2,
       spaceBetween: 10,
       pagination: {
         type: 'bullets',
@@ -73,11 +87,15 @@ export const SwiperHome = (props) => {
         className={styles['home']}
         spaceBetween={0}
         slidesPerView={1}
+        navigation={{
+          prevEl: '.navigation-left',
+          nextEl: '.navigation-right',
+        }}
         loop={true}
         speed={500}
         autoplay={autoplay}
         pagination={pagination}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Pagination, Navigation]}
         breakpoints={breakpoints}
         onSlideChange={(swiper) => {
           slideChange(swiper);
@@ -96,6 +114,36 @@ export const SwiperHome = (props) => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className={`${styles['navigation-wrap']} ${styles['navigation-left']}`}>
+        <div className='navigation-left'>
+          <button 
+          onMouseDown={(e) => {
+            e.currentTarget.style.transform= 'scale(1.1)';
+          }}
+          onMouseUp={(e) => {
+            e.currentTarget.style.transform= 'scale(1)';
+          }}
+          >
+            <ButtonLeft color='white'/>
+          </button>
+        </div>
+      </div>
+
+      <div className={`${styles['navigation-wrap']} ${styles['navigation-right']}`}>
+        <div className='navigation-right'>
+          <button
+          onMouseDown={(e) => {
+            e.currentTarget.style.transform= 'scale(1.1)';
+          }}
+          onMouseUp={(e) => {
+            e.currentTarget.style.transform= 'scale(1)';
+          }}
+          >
+            <ButtonRight color='white'/>
+          </button>
+        </div>
+      </div>
     </div>
   )
 };

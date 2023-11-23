@@ -13,6 +13,7 @@
   --color-4: #e5e5e5;
   --color-5: #dddddd;
   --color-7: #888888;
+  --color-10: #444444;
 
   --fontFamily-default: 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'sans-serif';
   --fontWeight-default: 400;
@@ -30,8 +31,11 @@
   --padding-body: 0 22px;
   --padding-body-rest: 8px;
 
-  --transition-default: all 0.1s;
+  --transition-default: all 0.15s;
   --transition-1: all 0.15s;
+  --transition-2: all 0.2s;
+  --transition-3: all 0.25s;
+  --transition-4: all 0.3s;
 
   --borderRadius-button: 4px;
 }

@@ -1,14 +1,18 @@
+.home-wrapper {
+  position: relative;
+}
+
 .home {
   width: 100%;
-  padding: 20px 0px 40px;
+  padding: 25px 0px 60px;
   margin-left: 30px;
   position: relative;
   overflow: visible;
   overflow-x: hidden;
 }
 
-.home::after {
-  width: 1%;
+/* .home::after {
+  width: 10%;
   height: 100%;
   display: block;
   content: '';
@@ -17,7 +21,7 @@
   top: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
   z-index: 1;
-}
+} */
 
 .home .swiper-slide {
   cursor: pointer;
@@ -69,8 +73,7 @@
 }
 
 .home .pagination {
-  width: 100%;
-  padding: var(--padding-default);
+  width: 1000px;
   display: flex;
   justify-content: flex-end;
   bottom: 20px;
@@ -114,6 +117,60 @@
   color: white;
 }
 
+.home-wrapper .navigation-wrap {
+  position: absolute;
+  z-index: 10;
+}
+
+.home-wrapper .navigation-wrap div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-1);
+  opacity: 0;
+}
+
+.home-wrapper:hover .navigation-wrap div {
+  opacity: 1;
+}
+
+.home-wrapper .navigation-wrap div button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+  backdrop-filter: brightness(0.5);
+  transition: var(--transition-1);
+}
+
+.home-wrapper .navigation-wrap div:hover button {
+  opacity: 0.7;
+}
+
+.home-wrapper .navigation-left {
+  left: 40px;
+  top: calc(50% - 45px);
+  width: 40px;
+  height: 40px;
+}
+
+.home-wrapper .navigation-right {
+  right: 0;
+  top: 25px;
+  width: 60px;
+  height: calc(100% - 85px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
+}
+
 @media screen and (max-width: 1080px) {
   .home {
     margin-left: 0px;
@@ -149,5 +206,9 @@
   .home .swiper-slide .box .info h1 {
     font-size: 16px;
     padding-top: 5px;
+  }
+
+  .home-wrapper .navigation-wrap {
+    display: none;
   }
 }
