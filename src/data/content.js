@@ -1,51 +1,50 @@
 export const contents = [
   {
     id: 1000,
-    title: 'FASHION',
-    description: '패션 브랜드의 컬렉션 페이지',
+    title: 'Fashion',
+    description: '패션 컬렉션 페이지',
     brand: 'FASHION',
-    html: ''
+    html: '',
+    textColor: 'white',
   },
   {
     id: 1001,
-    title: 'COSMETIC',
-    description: '화장품 브랜드의 신상 화장품 상세 페이지',
+    title: 'Apple',
+    description: 'Mac Studio 클론 코딩',
+    brand: 'APPLE',
+    html: '',
+    textColor: 'black',
+  },
+  {
+    id: 1002,
+    title: 'Cosmetic',
+    description: '화장품 상세 페이지',
     brand: 'COSMETIC',
-    html: ''
+    html: '',
+    textColor: 'white',
   },
   {
     id: 1000,
-    title: 'FASHION',
-    description: '패션 브랜드의 컬렉션 페이지',
+    title: 'Fashion',
+    description: '패션 컬렉션 페이지',
     brand: 'FASHION',
-    html: ''
+    html: '',
+    textColor: 'white',
   },
   {
     id: 1001,
-    title: 'COSMETIC',
-    description: '화장품 브랜드의 신상 화장품 상세 페이지',
+    title: 'Apple',
+    description: 'Mac Studio 클론 코딩',
+    brand: 'APPLE',
+    html: '',
+    textColor: 'black',
+  },
+  {
+    id: 1002,
+    title: 'Cosmetic',
+    description: '화장품 상세 페이지',
     brand: 'COSMETIC',
-    html: ''
-  },
-  {
-    id: 1000,
-    title: 'FASHION',
-    description: '패션 브랜드의 컬렉션 페이지',
-    brand: 'FASHION',
-    html: ''
-  },
-  {
-    id: 1001,
-    title: 'COSMETIC',
-    description: '화장품 브랜드의 신상 화장품 상세 페이지',
-    brand: 'COSMETIC',
-    html: ''
-  },
-  {
-    id: 1000,
-    title: 'FASHION',
-    description: '패션 브랜드의 컬렉션 페이지',
-    brand: 'FASHION',
-    html: ''
+    html: '',
+    textColor: 'white',
   },
 ];

@@ -107,8 +107,8 @@ export const SwiperHome = (props) => {
             <div className={styles['box']} onClick={() => { props.navigate(`${PATH.content}${data.id}`); }}>
               <img src={imgSrc(data.id)} alt={data.title}/>
               <div className={styles['info']}>
-                <h3>{data.brand}</h3>
-                <h1>{data.description}</h1>
+                <h3 style={{ color: data.textColor }}>{data.title}</h3>
+                <h1 style={{ color: data.textColor }}>{data.description}</h1>
               </div>
             </div>
           </SwiperSlide>

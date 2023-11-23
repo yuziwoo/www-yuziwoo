@@ -23,7 +23,6 @@
 .list .content .thumb {
   width: 100%;
   overflow: hidden;
-  background-color: var(--color-black);
 }
 
 .list .content .thumb img {

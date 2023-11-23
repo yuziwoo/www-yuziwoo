@@ -5,23 +5,12 @@
 .home {
   width: 100%;
   padding: 25px 0px 60px;
-  margin-left: 30px;
+  margin-left: 0px;
+  padding-left: 30px;
   position: relative;
   overflow: visible;
   overflow-x: hidden;
 }
-
-/* .home::after {
-  width: 10%;
-  height: 100%;
-  display: block;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
-  z-index: 1;
-} */
 
 .home .swiper-slide {
   cursor: pointer;
@@ -32,13 +21,15 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  transition: var(--transition-1);
+  transition: var(--transition-2);
   cursor: pointer;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .home .swiper-slide .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  /* transform: translateY(-5px); */
+  transform: scale(1.015);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .home .swiper-slide .box img {
@@ -52,10 +43,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0 16px 25px;
-  color: var(--color-white);
+  padding: 60px 16px 25px;
+  color: var(--color-black);
   line-height: var(--lineHeight-short);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 100%); */
 }
 
 .home .swiper-slide .box .info h3 {
@@ -63,6 +54,7 @@
   font-weight: 700;
   display: block;
   transition: all 0.7s;
+  /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .home .swiper-slide .box .info h1 {
@@ -70,6 +62,7 @@
   padding-top: 4px;
   display: block;
   transition: all 0.7s;
+  /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .home .pagination {
