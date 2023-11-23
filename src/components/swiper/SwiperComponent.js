@@ -44,6 +44,29 @@ export const SwiperHome = (props) => {
     },
   }
 
+  const slideChange = (swiper) => {
+    if (window.innerWidth <= CONTENT.style.mobMaxWidth) {
+      const slides = swiper.slides;
+      const max = slides.length - 1;
+      const activeIndex = swiper.activeIndex;
+      const nextIndex = activeIndex === max ? 0 : activeIndex + 1;
+      const prevIndex = activeIndex === 0 ? max : activeIndex - 1;
+      const width = swiper.width;
+      
+      const activeSlide = swiper.slides[activeIndex];
+      activeSlide.getElementsByTagName('h1')[0].style.transform = `translateX(0px)`;
+      activeSlide.getElementsByTagName('h3')[0].style.transform = `translateX(0px)`;
+
+      const nextSlide = swiper.slides[nextIndex];
+      nextSlide.getElementsByTagName('h1')[0].style.transform = `translateX(${width / 2}px)`;
+      nextSlide.getElementsByTagName('h3')[0].style.transform = `translateX(${width / 3 * 2}px)`;
+
+      const prevSlide = swiper.slides[prevIndex];
+      prevSlide.getElementsByTagName('h1')[0].style.transform = `translateX(-${width / 2}px)`;
+      prevSlide.getElementsByTagName('h3')[0].style.transform = `translateX(-${width / 3 * 2}px)`;
+    }
+  }
+
   return (
     <div className={styles['home-wrapper']}>
       <Swiper
@@ -57,26 +80,7 @@ export const SwiperHome = (props) => {
         modules={[Autoplay, Pagination]}
         breakpoints={breakpoints}
         onSlideChange={(swiper) => {
-          if (window.innerWidth <= CONTENT.style.mobMaxWidth) {
-            const slides = swiper.slides;
-            const max = slides.length - 1;
-            const activeIndex = swiper.activeIndex;
-            const nextIndex = activeIndex === max ? 0 : activeIndex + 1;
-            const prevIndex = activeIndex === 0 ? max : activeIndex - 1;
-            const width = swiper.width;
-            
-            const activeSlide = swiper.slides[activeIndex];
-            activeSlide.getElementsByTagName('h1')[0].style.transform = `translateX(0px)`;
-            activeSlide.getElementsByTagName('h3')[0].style.transform = `translateX(0px)`;
-
-            const nextSlide = swiper.slides[nextIndex];
-            nextSlide.getElementsByTagName('h1')[0].style.transform = `translateX(${width / 2}px)`;
-            nextSlide.getElementsByTagName('h3')[0].style.transform = `translateX(${width / 3 * 2}px)`;
-
-            const prevSlide = swiper.slides[prevIndex];
-            prevSlide.getElementsByTagName('h1')[0].style.transform = `translateX(-${width / 2}px)`;
-            prevSlide.getElementsByTagName('h3')[0].style.transform = `translateX(-${width / 3 * 2}px)`;
-          }
+          slideChange(swiper);
         }}
         // transitionStart={(swiper) => {console.log(swiper.el, swiper.activeIndex, swiper.slides[swiper.activeIndex], swiper.offsetWidth, swiper.previousTranslate)}}
       >

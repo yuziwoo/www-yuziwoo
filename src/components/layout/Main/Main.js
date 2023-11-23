@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-import { CONTENT } from '../../../constants/content';
 import { visitedURL } from '../../../utils/sessionStorage';
 import { Route, Routes } from 'react-router-dom';
 import NotFound from '../../../pages/NotFound/NotFound';

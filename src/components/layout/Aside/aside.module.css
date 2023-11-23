@@ -1,0 +1,33 @@
+aside {
+  position: fixed;
+  z-index: var(--zIndex-aside);
+  right: var(--padding-default-value);
+  bottom: 40px;
+}
+
+aside .button-wrap button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-white);
+  transition: var(--transition-default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .button-wrap button svg {
+  width: 80%;
+  height: 80%;
+}
+
+aside .button-wrap button:hover {
+  transform: scale(0.96);
+}
+
+@media screen and (max-width: 1080px) {
+  aside {
+    right: var(--padding-default-value);
+  }
+}
