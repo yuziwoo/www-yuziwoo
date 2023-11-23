@@ -36,6 +36,13 @@
   width: 100%;
   position: relative;
   display: block;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.home .swiper-slide .box:hover img {
+  transition: transform 10s;
+  transform: scale(1.1);
 }
 
 .home .swiper-slide .box .info {
