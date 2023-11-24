@@ -19,7 +19,7 @@ const Header = () => {
       setVisible(true);
     }
 
-    if (currentScrollPos > prevScrollPos && visible) {
+    if (currentScrollPos > prevScrollPos && visible && currentScrollPos > 100) {
       setVisible(false);
     }
 

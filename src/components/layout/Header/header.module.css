@@ -6,7 +6,7 @@ header {
   height: var(--header-height);
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  transition: var(--transition-2);
+  transition: var(--transition-4);
   z-index: var(--zIndex-header);
 }
 
