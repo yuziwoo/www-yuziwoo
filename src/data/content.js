@@ -13,7 +13,7 @@ export const contents = [
     description: 'Mac Studio 클론 코딩',
     brand: 'APPLE',
     html: '',
-    textColor: 'black',
+    textColor: 'white',
   },
   {
     id: 1002,
@@ -37,7 +37,7 @@ export const contents = [
     description: 'Mac Studio 클론 코딩',
     brand: 'APPLE',
     html: '',
-    textColor: 'black',
+    textColor: 'white',
   },
   {
     id: 1002,

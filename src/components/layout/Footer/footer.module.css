@@ -16,7 +16,11 @@ footer .wrap {
 
 footer .wrap .logo {
   width: 120px;
-  cursor: pointer;
+}
+
+footer .wrap .logo a {
+  width: 100%;
+  display: block;
 }
 
 footer .wrap .logo svg {
@@ -47,11 +51,6 @@ footer .info p {
   font-size: 12px;
 }
 
-footer .info .cursor-pointer,
-footer .info .cursor-pointer a {
-  cursor: pointer;
-}
-
 footer .info ul li {
   display: flex;
   justify-content: flex-start;
@@ -65,6 +64,10 @@ footer .info ul li h2 {
 
 footer .info ul li:hover h2 {
   color: var(--color-white);
+}
+
+footer .info ul li:hover p a {
+  text-decoration: underline;
 }
 
 footer .info .copyright {

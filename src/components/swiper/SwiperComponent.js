@@ -5,6 +5,8 @@ import styles from './swiper.module.css';
 import PATH from '../../constants/path';
 import { CONTENT } from '../../constants/content';
 import { ButtonLeft, ButtonRight } from '../interaction/interaction';
+import { Link } from 'react-router-dom';
+import scrollTop from '../../utils/scrollTop';
 
 export const SwiperHome = (props) => {
   const contents = props.contents;
@@ -39,7 +41,7 @@ export const SwiperHome = (props) => {
         bulletActiveClass: `${styles['pagination-bullet-active']}`,
         horizontalClass: `${styles['pagination']}`,
         renderBullet(index, className) {
-          return `<span class="${className}"></span>`;
+          return `<button class="${className}"><span></span></button>`;
         },
       },
     },
@@ -52,7 +54,7 @@ export const SwiperHome = (props) => {
         bulletActiveClass: `${styles['pagination-bullet-active']}`,
         horizontalClass: `${styles['pagination']}`,
         renderBullet(index, className) {
-          return `<span class="${className}"></span>`;
+          return `<button class="${className}"><span></span></button>`;
         },
       },
     },
@@ -104,13 +106,13 @@ export const SwiperHome = (props) => {
       >
         {contents.map((data, index) => (
           <SwiperSlide className={styles['swiper-slide']} key={`slide ${index}`} virtualIndex={index}>
-            <div className={styles['box']} onClick={() => { props.navigate(`${PATH.content}${data.id}`); }}>
+            <Link className={styles['box']} to={`${PATH.content}${data.id}`} onClick={scrollTop()}>
               <img src={imgSrc(data.id)} alt={data.title}/>
               <div className={styles['info']}>
                 <h3 style={{ color: data.textColor }}>{data.title}</h3>
                 <h1 style={{ color: data.textColor }}>{data.description}</h1>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
