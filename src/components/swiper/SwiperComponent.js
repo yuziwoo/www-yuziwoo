@@ -106,7 +106,7 @@ export const SwiperHome = (props) => {
       >
         {contents.map((data, index) => (
           <SwiperSlide className={styles['swiper-slide']} key={`slide ${index}`} virtualIndex={index}>
-            <Link className={styles['box']} to={`${PATH.content}${data.id}`} onClick={scrollTop()}>
+            <Link className={styles['box']} to={`${PATH.content}${data.id}`} onClick={scrollTop}>
               <img src={imgSrc(data.id)} alt={data.title}/>
               <div className={styles['info']}>
                 <h3 style={{ color: data.textColor }}>{data.title}</h3>

@@ -14,7 +14,7 @@ const ContentList = (props) => {
     <ul className={styles['list']}>
       {contents.map((data, index) => (
         <li className={styles['content']} key={index}>
-          <Link className={styles.a} to={`${PATH.content}${data.id}`} onClick={scrollTop()}>
+          <Link className={styles.a} to={`${PATH.content}${data.id}`} onClick={scrollTop}>
             <div className={styles['thumb']}>
               <img src={imgSrc(data.id)} alt={data.title} />
             </div>

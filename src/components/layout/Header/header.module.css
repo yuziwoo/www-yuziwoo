@@ -4,10 +4,14 @@ header {
   left: 0;
   top: 0;
   height: var(--header-height);
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  /* backdrop-filter: blur(10px); */
-  transition: transform 0.2s;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-2);
   z-index: var(--zIndex-header);
+}
+
+.header-off {
+  transform: translateY(-100%);
 }
 
 .header-relative {

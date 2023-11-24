@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles['wrap']}>
         <div className={styles['logo']}>
-          <Link className={styles.a} to={`${PATH.root}`} onClick={scrollTop()}>
+          <Link className={styles.a} to={`${PATH.root}`} onClick={scrollTop}>
             <Logo color='white'/>
           </Link>
         </div>
