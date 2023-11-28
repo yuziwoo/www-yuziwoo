@@ -1,12 +1,19 @@
 import { useParams } from "react-router-dom";
-import { CONTENT } from "../../constants/content";
 import styles from './content.module.css';
 
+import { useContenty } from '../../utils/Contenty/ContentyContext';
+import { useEffect } from "react";
+
 const Content = () => {
+  const contentyInstance = useContenty();
   const {id} = useParams();
 
+  useEffect(() => {
+    contentyInstance.setContenty();
+  }, [contentyInstance]);
+
   return(
-    <div className={`${CONTENT.className.main} ${styles['contenty']}`}>
+    <div className={`${contentyInstance.getContainerId()} ${styles['contenty']}`}>
       {id}
     </div>
   )

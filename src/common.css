@@ -3,6 +3,7 @@
 
 /* Root Variable*/
 :root {
+  --zIndex-mouse: 600;
   --zIndex-header: 500;
   --zIndex-aside: 450;
   

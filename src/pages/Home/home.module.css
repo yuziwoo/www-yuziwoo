@@ -21,7 +21,7 @@ section {
 section .title {
   width: 100%;
   padding: var(--padding-default);
-  font-size: 18px;
+  font-size: 36px;
   font-weight: 700;
   line-height: var(--lineHeight-short);
   opacity: 0;
@@ -42,6 +42,7 @@ section .subTitle {
 
 .home .sec1 {
   padding-left: calc(50% - 540px);
+  padding-top: calc(var(--header-height) + 60px);
   width: 100%;
 }
 
@@ -62,7 +63,7 @@ section .subTitle {
   }
   .home .sec1 {
     padding-left: 0;
-    padding-top: 0;
+    padding-top: var(--header-height);
   }
   .sec1 .title,
   .sec1 .subTitle {

@@ -1,5 +1,7 @@
-main {
+.main {
   min-height: var(--height-100vh-withoutHeader);
   width: 100%;
   overflow-x: hidden;
+  transition: background 1.5s;
+  padding-bottom: 120px;
 }

@@ -12,7 +12,6 @@
 .list .content {
   width: calc(16.6% - 10px);
   margin-left: 10px;
-  cursor: pointer;
   transition: var(--transition-default);
 }
 

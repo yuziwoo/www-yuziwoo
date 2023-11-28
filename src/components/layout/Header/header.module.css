@@ -4,18 +4,14 @@ header {
   left: 0;
   top: 0;
   height: var(--header-height);
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* backdrop-filter: blur(10px); */
   transition: var(--transition-4);
   z-index: var(--zIndex-header);
 }
 
 .header-off {
   transform: translateY(-100%);
-}
-
-.header-relative {
-  height: var(--header-height);
 }
 
 header .global-nav {
@@ -32,8 +28,13 @@ header .global-nav {
 header .global-nav .logo {
   width: 120px;
   height: 28px;
-  cursor: pointer;
   margin-left: var(--padding-body-rest);
+}
+
+header .global-nav .logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 header .global-nav .logo svg {
@@ -50,7 +51,6 @@ header .global-nav nav {
 
 header .global-nav nav p a {
   display: inline-block;
-  cursor: pointer;
   padding: 6px 8px;
   transition: var(--transition-1);
   border-radius: var(--borderRadius-button);

@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
+import { useContenty } from '../../utils/Contenty/ContentyContext';
+
 import ContentList from '../../components/contentList/ContentList';
 import { SwiperHome } from '../../components/swiper/SwiperComponent';
 import styles from './home.module.css';
 
 const Home = (props) => {
   const contents = props.contents;
+  const contentyInstance = useContenty();
+
+  useEffect(() => {
+    contentyInstance.setContenty();
+  }, []);
 
   return(
     <div className={styles['home']}>

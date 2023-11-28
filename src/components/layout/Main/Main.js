@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import Home from '../../../pages/Home/Home';
+import Content from '../../../pages/Content/Content';
+import Contact from '../../../pages/Contact/Contact';
+import NotFound from '../../../pages/NotFound/NotFound';
 
 import { visitedURL } from '../../../utils/sessionStorage';
-import { Route, Routes } from 'react-router-dom';
-import NotFound from '../../../pages/NotFound/NotFound';
-import Content from '../../../pages/Content/Content';
-import Home from '../../../pages/Home/Home';
-import Contact from '../../../pages/Contact/Contact';
-import Contenty from '../../../utils/Contenty';
 import { contents } from '../../../data/content';
+import { useContenty } from '../../../utils/Contenty/ContentyContext';
 
 import styles from './main.module.css'
 
-
 const Main = () => {
+  const contentyInstance = useContenty();
   useEffect(() => {
-    Contenty.setContenty();
     return (
       () => {
         visitedURL.setURLs();
@@ -23,11 +23,11 @@ const Main = () => {
   });
 
   return (
-    <main className={styles.main}>
+    <main className={styles['main']} id={`${contentyInstance.getContainerId()}`}>
       <Routes>
-        <Route path='/' element={<Home contents={contents} />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/' element={<Home contents={contents}/>} />
         <Route path='/content/:id' element={<Content contents={contents}/>} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </main>
