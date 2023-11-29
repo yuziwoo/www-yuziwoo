@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Mousewheel, Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import styles from './swiper.module.css';
 import PATH from '../../constants/path';
@@ -18,6 +18,7 @@ export const SwiperHome = (props) => {
   const autoplay = {
     delay: 3000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   }
 
   const pagination = {
@@ -97,12 +98,12 @@ export const SwiperHome = (props) => {
         speed={500}
         autoplay={autoplay}
         pagination={pagination}
-        modules={[Autoplay, Pagination, Navigation]}
+        mousewheel={false}
+        modules={[Mousewheel, Autoplay, Pagination, Navigation]}
         breakpoints={breakpoints}
         onSlideChange={(swiper) => {
           slideChange(swiper);
         }}
-        // transitionStart={(swiper) => {console.log(swiper.el, swiper.activeIndex, swiper.slides[swiper.activeIndex], swiper.offsetWidth, swiper.previousTranslate)}}
       >
         {contents.map((data, index) => (
           <SwiperSlide className={styles['swiper-slide']} key={`slide ${index}`} virtualIndex={index}>
@@ -149,3 +150,42 @@ export const SwiperHome = (props) => {
     </div>
   )
 };
+
+export const SwiperHomeMain = (props) => {
+  const contents = props.contents;
+
+  const imgSrc = (id) => {
+    return PATH.contentThumb(id);
+  }
+
+  const autoplay = {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  }
+
+  return (
+    <div className='swiper-wrap'>
+      <Swiper 
+        className='swiper'
+        spaceBetween={20}
+        slidesPerView={5}
+        centeredSlides={true}
+        loop={true}
+        speed={800}
+        autoplay={autoplay}
+        modules={[Autoplay]}
+      >
+        {
+          contents.map((data, index) => (
+            <SwiperSlide className='swiper-slide' key={`slide${index}`} virtualIndex={index}>
+              <Link className='box'>
+                <img src={imgSrc(data.id)} alt={data.title}/>
+              </Link>
+            </SwiperSlide>
+          ))
+        }
+      </Swiper>
+    </div>
+  )
+}

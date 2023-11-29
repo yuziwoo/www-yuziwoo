@@ -11,6 +11,7 @@ import { contents } from '../../../data/content';
 import { useContenty } from '../../../utils/Contenty/ContentyContext';
 
 import styles from './main.module.css'
+import About from '../../../pages/About/About';
 
 const Main = () => {
   const contentyInstance = useContenty();
@@ -28,6 +29,7 @@ const Main = () => {
         <Route path='/' element={<Home contents={contents}/>} />
         <Route path='/content/:id' element={<Content contents={contents}/>} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </main>

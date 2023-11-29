@@ -1,13 +1,14 @@
 import scrollTop from '../../../utils/scrollTop';
 import { ArrowUp } from '../../interaction/interaction';
-import styles from './aside.module.css';
+import './aside.css';
 
 const Aside = () => {
   return (
-    <aside className={styles.aside}>
-      <div className={styles['button-wrap']}>
+    <aside className='aside-off'>
+      <div className='button-wrap'>
         <button onClick={scrollTop}>
-          <ArrowUp color='black'/>
+          <ArrowUp color='white'/>
+          <ArrowUp color='white'/>
         </button>
       </div>
     </aside>

@@ -1,33 +1,49 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useContenty } from '../../utils/Contenty/ContentyContext';
 
-import ContentList from '../../components/contentList/ContentList';
-import { SwiperHome } from '../../components/swiper/SwiperComponent';
-import styles from './home.module.css';
+import './home.css';
 
 const Home = (props) => {
-  const contents = props.contents;
+  // const contents = props.contents;
   const contentyInstance = useContenty();
 
   useEffect(() => {
     contentyInstance.setContenty();
-  }, []);
+  }, [contentyInstance]);
+
+  const [isScrollDown, setIsScrollDown] = useState(true);
+  const wheelEventHandler = (e) => {
+    if (e.deltaY > 0 && !isScrollDown) {
+      setIsScrollDown(true);
+      return
+    }
+
+    if (e.deltaY < 0 && isScrollDown) {
+      setIsScrollDown(false);
+    }
+  }
 
   return(
-    <div className={styles['home']}>
-      <div className={styles['main-wrap']}>
-        <section className={styles['sec1']}>
-          <h1 className={styles['title']}>WEB SITES & PAGES</h1>
-          <h2 className={styles['subTitle']}>제작하고 싶은 웹사이트, 웹페이지의 종류를 확인해요.</h2>
-          <div className={styles['swiper-wrap']}>
-            <SwiperHome contents={contents} navigate={props.navigate}/>
+    <div className={`home`} onWheel={wheelEventHandler}>
+      <div className={`main-wrap`}>
+        <section className={`main-section`} style={{backgroundImage: `url('./img/home/home-bg.jpg')`}}>
+          <div className='represent-title'>
+            <div className={`${isScrollDown ? 'scroll-down' : 'scroll-up'} wrap`}>
+              <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
+              <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
+              <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
+              <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
+            </div>
           </div>
-        </section>
-  
-        <section className={styles['sec2']}>
-          <h1 className={styles['title']}>BEST TOP 6</h1>
-          <h2 className={styles['subTitle']}>가장 인기가 많은 페이지들을 모았어요.</h2>
-          <ContentList contents={contents} navigate={props.navigate}/>
+
+          <div className='bottom'>
+            <div className='wrap'>
+              <h2>바다를 좋아하는 개발자의</h2>
+            </div>
+            <div className='wrap'>
+              <h2>여유를 담은 퍼블리싱 스튜디오</h2>
+            </div>
+          </div>
         </section>
       </div>
     </div>

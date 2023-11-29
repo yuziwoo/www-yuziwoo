@@ -9,6 +9,7 @@
   
   --color-black: #000;
   --color-white: #fff;
+  --color-symbol: #EEEAE3;
   --color-2: #f8f8f8;
   --color-3: #eeeeee;
   --color-4: #e5e5e5;
@@ -22,7 +23,7 @@
   --lineHeight-default: 1.4;
   --lineHeight-short: 1.2;
 
-  --header-height: 60px;
+  --header-height: 54px;
 
   --height-100vh: 100vh;
   --height-100vh-withoutHeader: calc(100vh - var(--header-height));
@@ -37,6 +38,7 @@
   --transition-2: all 0.2s;
   --transition-3: all 0.25s;
   --transition-4: all 0.3s;
+  --transition-5: all 0.6s;
 
   --borderRadius-button: 4px;
 }
@@ -81,7 +83,7 @@ body {
 }
 
 /* 최소 디바이스 */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 300px) {
   html {
     -moz-text-size-adjust: 100%;
     -o-text-size-adjust: 100%;
@@ -90,7 +92,7 @@ body {
   }
 
   body {
-    min-width: 320px;
+    min-width: 300px;
   }
 }
 
@@ -149,3 +151,35 @@ q:before {
 }
 
 /* only for this app */
+body {
+  background-color: var(--color-symbol);
+}
+
+@keyframes hueRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp100 {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

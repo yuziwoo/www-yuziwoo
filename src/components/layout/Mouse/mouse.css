@@ -13,8 +13,11 @@
   left: 0;
   top: 0;
   pointer-events: none;
-  fill: rgba(71, 118, 200, 1);
-  transition: fill 0.2s;
+  fill: var(--color-white);
+  stroke: var(--color-white);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: fill 0.2s, stroke 0.2s;
 }
 
 #mouse-event svg #mouse-pointer {
@@ -22,7 +25,7 @@
 }
 
 #mouse-event[class*='mouseHover'] svg {
-  fill: rgba(71, 118, 200, 0.6);
+  fill: var(--color-white);
 }
 
 #mouse-event[class*='mousemove'] svg #mouse-pointer {
@@ -30,8 +33,10 @@
 }
 
 #mouse-event[class*='mouseHover'] svg #mouse-pointer {
-  r: 24;
-  transition: r 0.2s;
+  r: 36;
+  fill: transparent;
+  stroke-width: 2;
+  transition: r 0.2s, stroke 0.2s;
 }
 
 #mouse-event[class*='mouseHover'] svg #mouse-polyline {
@@ -40,7 +45,7 @@
 
 #mouse-event svg #mouse-polyline {
   fill: none;
-  stroke: rgba(71, 118, 200, 1);
+  stroke: var(--color-white);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
