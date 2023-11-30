@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import contentState from './contentSlice';
+import pathState from './pathSlice';
 
 export default configureStore({
   reducer: {
-    contentState: contentState.reducer,
+    pathState: pathState.reducer,
   },
 });

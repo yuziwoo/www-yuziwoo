@@ -10,6 +10,7 @@
   --color-black: #000;
   --color-white: #fff;
   --color-symbol: #EEEAE3;
+  --color-symbol-black: #2B2926;
   --color-2: #f8f8f8;
   --color-3: #eeeeee;
   --color-4: #e5e5e5;
@@ -60,6 +61,7 @@
   color: inherit;
   user-select: none;
   flex-shrink: 0;
+  -webkit-user-drag: none;
 
   /* device reset */
   -webkit-text-size-adjust: none;

@@ -1,19 +1,21 @@
-import { useEffect } from 'react';
-import { useContenty } from '../../utils/Contenty/ContentyContext';
-import styles from './contact.module.css';
+import { useParams } from "react-router-dom";
 
-const Contact = () => {
+import { useContenty } from '../../utils/Contenty/ContentyContext';
+import { useEffect } from "react";
+
+const Shoplist = () => {
   const contentyInstance = useContenty();
+  const {id} = useParams();
 
   useEffect(() => {
     contentyInstance.setContenty();
   }, [contentyInstance]);
 
   return(
-    <div className={styles['contact']}>
-      다시
+    <div>
+      {id}
     </div>
   )
 };
 
-export default Contact;
+export default Shoplist;

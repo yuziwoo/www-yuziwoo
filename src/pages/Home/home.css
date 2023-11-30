@@ -9,6 +9,13 @@
 
 .home .main-wrap .main-section {
   padding-top: var(--header-height);
+  background-color: #A7C7D3;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  background-attachment: fixed;
 }
 
 .home .main-wrap .main-section .represent-title {
@@ -18,7 +25,7 @@
   color: var(--color-white);
   mix-blend-mode: difference;
   opacity: 0;
-  animation: fadeIn 1.2s 1 forwards;
+  animation: fadeIn 1.2s 0.3s 1 forwards;
   padding-top: 2vh;
 }
 
@@ -38,6 +45,7 @@
   position: absolute;
   top: 0;
   animation-duration: 60s;
+  animation-delay: 0.3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -178,15 +186,6 @@
   }
 }
 
-.home .main-wrap .main-section {
-  width: 100%;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
-  background-attachment: fixed;
-}
-
 .home .main-section h1 {
   color: white;
   font-size: 24px
@@ -221,15 +220,66 @@
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-delay: 0.3s;
+  animation-delay: 0.9s;
 }
 
 .home .main-wrap .bottom .wrap:nth-child(2) h2 {
-  animation-delay: 0.6s;
+  animation-delay: 1.2s;
 }
 
-@media screen and (max-width: 430px) {
+.home .main-wrap .ocean-img-box {
+  width: 36.4584%;
+  position: absolute;
+  bottom: 3vh;
+  right: 5.2%;
+  overflow: hidden;
+}
+
+.home .main-wrap .ocean-img-box .ocean-img-wrap {
+  width: 100%;
+  transform: translateX(100%);
+  animation: home-ocean-wrap 1.5s 0.9s 1 forwards cubic-bezier(.16,.84,.36,1);
+  overflow: hidden;
+}
+
+@keyframes home-ocean-wrap {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.home .main-wrap .ocean-img-box .ocean-img-wrap img {
+  width: 100%;
+  display: block;
+  transform-origin: center bottom;
+  transform: scale(1.5, 1.5);
+  animation: home-ocean-img 1.5s 0.9s 1 forwards cubic-bezier(.16,.84,.36,1);
+}
+
+@keyframes home-ocean-img {
+  from {
+    transform: scale(1.5, 1.5);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 720px) {
   .home .main-wrap .bottom .wrap h2 {
     font-size: 20px;
+  }
+
+  .home .main-wrap .ocean-img-box {
+    width: 80%;
+    bottom: 120px;
+    right: var(--padding-default-value);
+  }
+
+  .home .main-wrap .ocean-img-box .ocean-img-wrap img {
+    transform-origin: center top;
   }
 }

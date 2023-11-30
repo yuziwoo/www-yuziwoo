@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useContenty } from '../../utils/Contenty/ContentyContext';
 
 import './home.css';
@@ -11,28 +11,22 @@ const Home = (props) => {
     contentyInstance.setContenty();
   }, [contentyInstance]);
 
-  const [isScrollDown, setIsScrollDown] = useState(true);
-  const wheelEventHandler = (e) => {
-    if (e.deltaY > 0 && !isScrollDown) {
-      setIsScrollDown(true);
-      return
-    }
-
-    if (e.deltaY < 0 && isScrollDown) {
-      setIsScrollDown(false);
-    }
-  }
-
   return(
-    <div className={`home`} onWheel={wheelEventHandler}>
+    <div className={`home`}>
       <div className={`main-wrap`}>
         <section className={`main-section`} style={{backgroundImage: `url('./img/home/home-bg.jpg')`}}>
           <div className='represent-title'>
-            <div className={`${isScrollDown ? 'scroll-down' : 'scroll-up'} wrap`}>
+            <div className={`wrap`}>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
+            </div>
+          </div>
+
+          <div className='ocean-img-box'>
+            <div className='ocean-img-wrap'>
+              <img src='./img/home/home-1.jpg' alt='바다 이미지'/>
             </div>
           </div>
 

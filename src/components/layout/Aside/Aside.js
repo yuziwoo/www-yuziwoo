@@ -4,7 +4,7 @@ import './aside.css';
 
 const Aside = () => {
   return (
-    <aside className='aside-off'>
+    <aside>
       <div className='button-wrap'>
         <button onClick={scrollTop}>
           <ArrowUp color='white'/>

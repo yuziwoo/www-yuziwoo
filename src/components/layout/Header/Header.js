@@ -17,12 +17,10 @@ const Header = () => {
 
     if (currentScrollPos < prevScrollPos && !visible) {
       setVisible(true);
-      document.getElementsByTagName('aside')[0].classList.remove('aside-off');
     }
 
     if (currentScrollPos > prevScrollPos && visible && currentScrollPos > 100) {
       setVisible(false);
-      document.getElementsByTagName('aside')[0].classList.add('aside-off');
     }
 
     setPrevScrollPos(currentScrollPos);
@@ -50,7 +48,7 @@ const Header = () => {
           </div>
           <nav>
             <p>
-              <Link onClick={scrollTop} to='/contact' className={styles.a}>
+              <Link onClick={scrollTop} to='/shop' className={styles.a}>
                 SHOP
               </Link>
             </p>
