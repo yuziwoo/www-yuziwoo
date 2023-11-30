@@ -35,7 +35,7 @@ const Home = (props) => {
               <h2>바다를 좋아하는 개발자의</h2>
             </div>
             <div className='wrap'>
-              <h2>여유를 담은 퍼블리싱 스튜디오</h2>
+              <h2>여유를 담은 웹 스튜디오</h2>
             </div>
           </div>
         </section>
