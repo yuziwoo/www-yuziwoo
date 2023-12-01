@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useContenty } from '../../utils/Contenty/ContentyContext';
 
 import './home.css';
+import { CONTENTY_API } from '../../constants/contenty';
 
 const Home = (props) => {
   // const contents = props.contents;
@@ -12,11 +13,11 @@ const Home = (props) => {
   }, [contentyInstance]);
 
   return(
-    <div className={`home`}>
-      <div className={`main-wrap`}>
-        <section className={`main-section`} style={{backgroundImage: `url('./img/home/home-bg.jpg')`}}>
+    <div className='home'>
+      <div className={`main-wrap ${CONTENTY_API.className}`} data-contenty={`${CONTENTY_API.shadow.attributeName}`}>
+        <section className='main-section' style={{backgroundImage: `url('./img/home/home-bg.jpg')`}}>
           <div className='represent-title'>
-            <div className={`wrap`}>
+            <div className='wrap'>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>
               <h1>&nbsp;&nbsp;&nbsp;Code. Create. Captivate.&nbsp;</h1>

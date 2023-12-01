@@ -13,6 +13,7 @@ import { useContenty } from '../../../utils/Contenty/ContentyContext';
 
 import styles from './main.module.css'
 import HomeSkeleton from '../../../pages/Home/HomeSkeleton';
+import '../../../utils/Contenty/contenty.css';
 
 const Main = () => {
   const contentyInstance = useContenty();

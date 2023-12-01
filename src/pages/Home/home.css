@@ -238,7 +238,7 @@
 .home .main-wrap .ocean-img-box .ocean-img-wrap {
   width: 100%;
   transform: translateX(100%);
-  animation: home-ocean-wrap 1.5s 0.9s 1 forwards cubic-bezier(.16,.84,.36,1);
+  animation: home-ocean-wrap 1.5s 0.9s 1 forwards var(--timingFunction-easeOut);
   overflow: hidden;
 }
 
@@ -256,7 +256,7 @@
   display: block;
   transform-origin: center bottom;
   transform: scale(1.5, 1.5);
-  animation: home-ocean-img 1.5s 0.9s 1 forwards cubic-bezier(.16,.84,.36,1);
+  animation: home-ocean-img 1.5s 0.9s 1 forwards var(--timingFunction-easeOut);
 }
 
 @keyframes home-ocean-img {

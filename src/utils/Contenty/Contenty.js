@@ -1,8 +1,10 @@
+import { CONTENTY_API } from '../../constants/contenty';
 import MouseEvent from '../MouseEvent/MouseEvent';
 import WheelEvent from '../WheelEvent/WheelEvent';
 
 class Contenty {
-  #containerId = 'contenty';
+  // 메인 컨테이너 태그에 아이디 값을 적용해주세요.
+  #containerId = CONTENTY_API.idName;
 
   constructor() {
     this.container = null;
@@ -14,10 +16,11 @@ class Contenty {
     if (this.container === null) {
       this.container = document.getElementById(this.#containerId);
       this.mouseEvent = new MouseEvent();
-      this.wheelEvent = new WheelEvent();
+      this.wheelEvent = new WheelEvent(this.container);
     } else {
       this.changeDOM();
     }
+    this.wheelEvent.resetElements();
   }
 
   getContainer() {

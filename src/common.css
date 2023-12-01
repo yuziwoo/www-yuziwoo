@@ -41,6 +41,8 @@
   --transition-4: all 0.3s;
   --transition-5: all 0.6s;
 
+  --timingFunction-easeOut: cubic-bezier(0.23, 1, 0.32, 1);
+
   --borderRadius-button: 4px;
 }
 
@@ -183,5 +185,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
