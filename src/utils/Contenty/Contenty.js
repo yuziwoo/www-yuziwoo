@@ -1,4 +1,4 @@
-import { CONTENTY_API } from '../../constants/contenty';
+import { CONTENTY_API } from '../../constants/contentyAPI';
 import MouseEvent from '../MouseEvent/MouseEvent';
 import WheelEvent from '../WheelEvent/WheelEvent';
 

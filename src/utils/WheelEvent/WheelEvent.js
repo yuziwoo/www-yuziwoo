@@ -1,12 +1,7 @@
-import { CONTENTY_API } from '../../constants/contenty';
+import { CONTENTY_API } from '../../constants/contentyAPI';
 import ElementEffect from './ElementEffect';
 import ResetElement from './ResetElement';
 class WheelEvent {
-  /** 
-   * 사용 방법
-   * html 태그에 아래와 같이 class와 data-contenty값을 적용해주세요.
-   * <div className={`${CONTENTY_API.className}`} data-contenty={`${CONTENTY_API.event.attributeName}`}>
-  */
   constructor(container) {
     this.container = container;
     this.elements = [];
@@ -30,10 +25,15 @@ class WheelEvent {
     }
 
     this.resetElementsDeep();
+    this.eventHandler();
   }
 
   resetElementsDeep() {
-    this.elements = [...this.container.getElementsByClassName(CONTENTY_API.className)];
+    this.elements = [...this.container.getElementsByClassName(CONTENTY_API.className)]
+        .filter((element) => (
+          element.getAttribute('data-contenty') in ResetElement
+          && element.getAttribute('data-contenty') in ElementEffect
+        ));
 
     this.elements.forEach((element) => {
       ResetElement[`${element.getAttribute('data-contenty')}`](element);
@@ -41,8 +41,8 @@ class WheelEvent {
   }
 
   triggerElementsEffect(scrollY) {
-    this.elements.forEach((element) => {
-      ElementEffect[`${element.getAttribute('data-contenty')}`](element, scrollY);
+    this.elements.forEach((element, index, elements) => {
+      ElementEffect[`${element.getAttribute('data-contenty')}`](element, scrollY, elements);
     });
   }
 }

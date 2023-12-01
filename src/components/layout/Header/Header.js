@@ -60,7 +60,6 @@ const Header = () => {
           </nav>
         </div>
       </header>
-      <div className={styles['header-relative']}></div>
     </>
   );
 };

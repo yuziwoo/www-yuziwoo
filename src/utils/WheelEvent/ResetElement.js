@@ -1,4 +1,4 @@
-import { CONTENTY_API } from "../../constants/contenty";
+import { CONTENTY_API } from "../../constants/contentyAPI";
 
 const ResetElement = Object.freeze({
   shadow(element) {
@@ -11,6 +11,7 @@ const ResetElement = Object.freeze({
       element.insertBefore(shadowElement, element.firstChild);
     }
   },
+  fade() {},
 })
 
 export default ResetElement;

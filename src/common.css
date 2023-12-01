@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display&display=swap');
 
 /* Root Variable*/
 :root {
@@ -9,8 +9,8 @@
   
   --color-black: #000;
   --color-white: #fff;
-  --color-symbol: #EEEAE3;
-  --color-symbol-black: #2B2926;
+  --color-symbol: #FAFAF9;
+  --color-symbol-black: #07080D;
   --color-2: #f8f8f8;
   --color-3: #eeeeee;
   --color-4: #e5e5e5;
@@ -159,6 +159,19 @@ body {
   background-color: var(--color-symbol);
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
+.font-nanumMyungjo {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.font-playfairDisplay {
+  font-family: 'Playfair Display', serif;
+}
+
 @keyframes hueRotate {
   from {
     filter: hue-rotate(0deg);
@@ -194,5 +207,38 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink2 {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
   }
 }
