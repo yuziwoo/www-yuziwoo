@@ -7,10 +7,11 @@ import './common.css';
 
 import Contenty from './utils/Contenty/Contenty';
 import { ContentyProvider } from './utils/Contenty/ContentyContext';
+import './utils/Contenty/css/contenty.css';
 
 const contentyInstance = new Contenty();
 
-function App() {
+const App = () => {
   return (
     <ContentyProvider contentyInstance={contentyInstance}>
       <div className="App">

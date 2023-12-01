@@ -1,4 +1,4 @@
-import { CONTENTY_API } from '../../constants/contentyAPI';
+import { CONTENTY_API } from '../Contenty/constants/contentyAPI';
 import ElementEffect from './ElementEffect';
 import ResetElement from './ResetElement';
 class ScrollEvent {

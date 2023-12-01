@@ -1,19 +1,19 @@
+// system import
 import { Suspense, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+// page import
 import { HomePage } from '../../../pages/router/lazy';
+import HomeSkeleton from '../../../pages/Home/HomeSkeleton';
 import About from '../../../pages/About/About';
 import Shop from '../../../pages/Shop/Shop';
 import Shoplist from '../../../pages/Shop/Shoplist';
 import NotFound from '../../../pages/NotFound/NotFound';
 
+// others
 import { visitedURL } from '../../../utils/sessionStorage';
 import { contents } from '../../../data/content';
 import { useContenty } from '../../../utils/Contenty/ContentyContext';
-
-import styles from './main.module.css'
-import HomeSkeleton from '../../../pages/Home/HomeSkeleton';
-import '../../../utils/Contenty/contenty.css';
 
 const Main = () => {
   const contentyInstance = useContenty();
@@ -27,7 +27,7 @@ const Main = () => {
   });
 
   return (
-    <main className={styles['main']} id={`${contentyInstance.getContainerId()}`}>
+    <main id={`${contentyInstance.getContainerId()}`} style={{ minHeight: '100vh', transition: 'background 1.5s', paddingBottom: '120px'}}>
       <Routes>
         <Route path='/' element={
           <Suspense fallback={<HomeSkeleton />}>

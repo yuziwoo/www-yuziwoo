@@ -1,13 +1,16 @@
+// system import
 import { useEffect } from 'react';
+
+// others
 import { useContenty } from '../../utils/Contenty/ContentyContext';
+import { CONTENTY_API } from '../../utils/Contenty/constants/contentyAPI';
 
-import './home.css';
-import { CONTENTY_API } from '../../constants/contentyAPI';
-import { Flake1half } from '../../components/interaction/interaction';
 import API from '../../constants/api';
+import './home.css';
 
-const Home = (props) => {
-  // const contents = props.contents;
+import { Flake1half } from '../../components/interaction/interaction';
+
+const Home = () => {
   const contentyInstance = useContenty();
 
   useEffect(() => {
