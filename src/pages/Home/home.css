@@ -287,13 +287,32 @@
 }
 
 @media screen and (max-width: 720px) {
+  .home .main-wrap .main-section {
+    background-position: bottom center;
+  }
+
+  .home .main-wrap .main-section .represent-title .wrap {
+    width: 150%;
+  }
+  .home .main-wrap .main-section .represent-title .wrap h1 {
+    animation-duration: 30s;
+    font-size: 20em;
+  }
   .home .main-wrap .bottom .wrap h2 {
     font-size: 20px;
+    font-weight: 700;
   }
 
   .home .main-wrap .ocean-img-box {
-    width: 80%;
-    bottom: 120px;
+    width: 70%;
+    right: var(--padding-default-value);
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .home .main-wrap .ocean-img-box {
+    width: calc(100% - var(--padding-default-value) - var(--padding-default-value));
   }
 }
 
