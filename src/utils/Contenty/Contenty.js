@@ -1,6 +1,6 @@
 import { CONTENTY_API } from '../../constants/contentyAPI';
 import MouseEvent from '../MouseEvent/MouseEvent';
-import WheelEvent from '../WheelEvent/WheelEvent';
+import ScrollEvent from '../ScrollEvent/ScrollEvent';
 
 class Contenty {
   // 메인 컨테이너 태그에 아이디 값을 적용해주세요.
@@ -16,11 +16,11 @@ class Contenty {
     if (this.container === null) {
       this.container = document.getElementById(this.#containerId);
       this.mouseEvent = new MouseEvent();
-      this.wheelEvent = new WheelEvent(this.container);
+      this.scrollEvent = new ScrollEvent(this.container);
     } else {
       this.changeDOM();
     }
-    this.wheelEvent.resetElements();
+    this.scrollEvent.resetElements();
   }
 
   getContainer() {

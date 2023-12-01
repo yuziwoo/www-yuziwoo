@@ -1,12 +1,12 @@
 import { CONTENTY_API } from '../../constants/contentyAPI';
 import ElementEffect from './ElementEffect';
 import ResetElement from './ResetElement';
-class WheelEvent {
+class ScrollEvent {
   constructor(container) {
     this.container = container;
     this.elements = [];
 
-    window.addEventListener('wheel', this.eventHandler.bind(this));
+    window.addEventListener('scroll', this.eventHandler.bind(this));
   }
 
   eventHandler() {
@@ -47,4 +47,4 @@ class WheelEvent {
   }
 }
 
-export default WheelEvent;
+export default ScrollEvent;
