@@ -1,3 +1,9 @@
+const ERROR_PREFIX = '[CONTENTY ERROR]';
+
+const errorMessage = Object.freeze({
+  missingEffectName: `${ERROR_PREFIX} 존재하지 않는 이펙트 이름입니다.`,
+})
+
 const shadow = Object.freeze({
   attributeName: 'shadow',
   shadowElementClassName: 'contenty-shadow',
@@ -18,7 +24,10 @@ const fade = Object.freeze({
 export const CONTENTY_API = Object.freeze({
   idName: 'contenty',
   className: 'contenty',
-  completeClassName: 'contenty-on',
+  attributeName: 'data-contenty',
+  readyElementClassName: 'contenty-ready',
+  completeElementClassName: 'contenty-on',
+  errorMessage,
   shadow,
   fade,
 })

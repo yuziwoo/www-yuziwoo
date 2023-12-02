@@ -1,6 +1,6 @@
 import { CONTENTY_API } from './constants/contentyAPI';
 import MouseEvent from './MouseEvent/MouseEvent';
-import ScrollEvent from '../ScrollEvent/ScrollEvent';
+import ScrollEvent from './ScrollEvent/ScrollEvent';
 
 class Contenty {
   // 메인 컨테이너 태그에 적용할 아이디 값
@@ -10,15 +10,26 @@ class Contenty {
   #mouseEvent = null;
   #scrollEvent = null;
 
+  static instanceCount = 0;
+
   setContenty() {
-    if (this.#container === null) {
+    if (Contenty.instanceCount === 0) return;
+
+    if (this.#container === null && Contenty.instanceCount === 1) {
       this.#container = document.getElementById(this.#containerId);
       this.#mouseEvent = new MouseEvent();
       this.#scrollEvent = new ScrollEvent(this.#container);
     } else {
       this.changeDOM();
     }
-    this.#scrollEvent.resetElements();
+  }
+
+  static createInstance() {
+    if (Contenty.instanceCount === 0) {
+      Contenty.instanceCount += 1;
+      return new Contenty();
+    }
+    return null;
   }
 
   getContainer() {
@@ -31,6 +42,7 @@ class Contenty {
 
   changeDOM() {
     this.#mouseEvent.setHoverEvent(this.#container);
+    this.#scrollEvent.refresh();
   }
 }
 

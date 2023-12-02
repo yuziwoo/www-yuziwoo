@@ -1,7 +1,7 @@
-import { CONTENTY_API } from "../Contenty/constants/contentyAPI";
+import { CONTENTY_API } from "../constants/contentyAPI";
 
-const ElementEffect = Object.freeze({
-  shadow(element, scrollY) {
+const effects = Object.freeze({
+  shadow(scrollY, triggerPoint, element, elements) {
     const eventStartPos = element.getBoundingClientRect().top + window.scrollY;
     const eventDist = element.offsetHeight;
     const eventEndPos = eventDist + eventStartPos;
@@ -14,17 +14,17 @@ const ElementEffect = Object.freeze({
       effectElement.style.opacity = opacity;
     }
   },
-  fade(element, scrollY, elements) {
-    if (element.getBoundingClientRect().top > window.innerHeight) return;
-    const triggerPoint = window.innerHeight * 0.7;
-    const eventPos = element.getBoundingClientRect().top + window.scrollY - triggerPoint;
+  
+  fade(scrollY, triggerPoint, element, elements) {
+    const executePos = element.getBoundingClientRect().top + window.scrollY - triggerPoint;
 
-    if (scrollY >= eventPos) {
-      element.classList.add(CONTENTY_API.completeClassName);
+    if (scrollY >= executePos) {
+      element.classList.add(CONTENTY_API.completeElementClassName);
+      
       const index = elements.findIndex((value) => value === element);
       elements.splice(index, 1);
     }
   },
 })
 
-export default ElementEffect;
+export default effects;

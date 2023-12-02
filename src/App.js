@@ -8,7 +8,7 @@ import Contenty from './utils/Contenty/Contenty';
 import { ContentyProvider } from './utils/Contenty/ContentyContext';
 import './utils/Contenty/css/index.css';
 
-const contentyInstance = new Contenty();
+const contentyInstance = Contenty.createInstance();
 
 const App = () => {
   return (
