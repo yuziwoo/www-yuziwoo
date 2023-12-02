@@ -1,5 +1,5 @@
 import { CONTENTY_API } from './constants/contentyAPI';
-import MouseEvent from '../MouseEvent/MouseEvent';
+import MouseEvent from './MouseEvent/MouseEvent';
 import ScrollEvent from '../ScrollEvent/ScrollEvent';
 
 class Contenty {
@@ -30,7 +30,7 @@ class Contenty {
   }
 
   changeDOM() {
-    this.#mouseEvent.setMouseHoverEvent(this.#container);
+    this.#mouseEvent.setHoverEvent(this.#container);
   }
 }
 

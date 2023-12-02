@@ -1,4 +1,4 @@
-#mouse-event {
+#contenty-mouseEvent {
   width: 0;
   height: 0;
   position: relative;
@@ -6,7 +6,7 @@
   mix-blend-mode: difference;
 }
 
-#mouse-event svg {
+#contenty-mouseEvent svg {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -20,30 +20,30 @@
   transition: fill 0.2s, stroke 0.2s;
 }
 
-#mouse-event svg #mouse-pointer {
+#contenty-mouseEvent svg #contenty-mouseEvent-pointer {
   transition: r 0.15s;
 }
 
-#mouse-event[class*='mouseHover'] svg {
+#contenty-mouseEvent[class*='mouseHover'] svg {
   fill: var(--color-white);
 }
 
-#mouse-event[class*='mousemove'] svg #mouse-pointer {
+#contenty-mouseEvent[class*='mousemove'] svg #contenty-mouseEvent-pointer {
   transition: none;
 }
 
-#mouse-event[class*='mouseHover'] svg #mouse-pointer {
+#contenty-mouseEvent[class*='mouseHover'] svg #contenty-mouseEvent-pointer {
   r: 36;
   fill: transparent;
   stroke-width: 2;
   transition: r 0.2s, stroke 0.2s;
 }
 
-#mouse-event[class*='mouseHover'] svg #mouse-polyline {
+#contenty-mouseEvent[class*='mouseHover'] svg #contenty-mouseEvent-tail {
   display: none;
 }
 
-#mouse-event svg #mouse-polyline {
+#contenty-mouseEvent svg #contenty-mouseEvent-tail {
   fill: none;
   stroke: var(--color-white);
   stroke-width: 2;

@@ -3,8 +3,9 @@ const className = Object.freeze({
   mouseHover: 'mouseHover',
 })
 
-const MOUSE_EVENT = Object.freeze({
+const MOUSE_EVENT_API = Object.freeze({
   className,
-})
+  maxPointListCount: 12,
+});
 
-export default MOUSE_EVENT;
+export default MOUSE_EVENT_API;

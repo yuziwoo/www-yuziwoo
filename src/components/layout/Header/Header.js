@@ -5,7 +5,7 @@ import Logo from '../../Logo';
 import styles from './header.module.css';
 
 import scrollTop from '../../../utils/scrollTop';
-import { throttle } from '../../../utils/throttle';
+import { throttle } from '../../../utils/Contenty/utils/throttle';
 
 const Header = () => {
   const defaultPosY = window.scrollY;

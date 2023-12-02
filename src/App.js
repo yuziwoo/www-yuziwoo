@@ -2,12 +2,11 @@ import Header from './components/layout/Header/Header';
 import Main from './components/layout/Main/Main';
 import Footer from './components/layout/Footer/Footer';
 import Aside from './components/layout/Aside/Aside';
-import Mouse from './components/layout/Mouse/Mouse';
 import './common.css';
 
 import Contenty from './utils/Contenty/Contenty';
 import { ContentyProvider } from './utils/Contenty/ContentyContext';
-import './utils/Contenty/css/contenty.css';
+import './utils/Contenty/css/index.css';
 
 const contentyInstance = new Contenty();
 
@@ -19,7 +18,6 @@ const App = () => {
         <Main />
         <Aside />
         <Footer />
-        <Mouse />
       </div>
     </ContentyProvider>
   );
